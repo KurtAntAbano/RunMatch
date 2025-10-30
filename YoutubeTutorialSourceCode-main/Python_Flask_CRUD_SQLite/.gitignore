@@ -1,0 +1,31 @@
+# Ignore system folders and OneDrive junk
+AppData/
+.cache/
+.vscode/
+*.log
+*.tmp
+*.bak
+*.DS_Store
+Thumbs.db
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Ignore OneDrive sync files
+*.lnk
+*.ini
+*.tmp
+~$*
+
+# Ignore Windows folders
+Documents/
+Cookies/
+Local Settings/
+My Documents/
+NetHood/
+PrintHood/
+Recent/
+SendTo/
+Start Menu/
+Templates/
