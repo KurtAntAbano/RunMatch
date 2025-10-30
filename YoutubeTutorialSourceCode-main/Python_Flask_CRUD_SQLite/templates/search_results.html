@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='myStyle.css') }}">
+    <title>RunTogether User Management</title>
+</head>
+<body>
+<div class="section">
+    <h1 style="color: white;">FIND YOUR RUNNING PARTNER TODAY</h1>
+</div>
+    </div>
+    <div class="search_container">
+        <h2>Runners near you:</h2>
+        <ul class="user-list">
+            {% for user in users %}
+        <li class="user-card">
+            <div class="user-item"><strong>Name:</strong> {{ user[3] }}</div>
+
+            <div class="user-item">
+                <img src="/static/prof_icon.png" alt="Proficiency icon" class="user-icon">
+                {{ user[4] }}
+            </div>
+
+            <div class="user-item">
+                <img src="/static/pace_icon.png" alt="Pace icon" class="user-icon">
+                {{ user[5] }}
+            </div>
+
+            <div class="user-item">
+                <img src="/static/dist_icon.png" alt="Distance icon" class="user-icon">
+                {{ user[6] }}
+            </div>
+
+            <div class="user-item">
+                <img src="/static/map_icon.png" alt="Location icon" class="user-icon">
+                {{ user[7] }}
+            </div>
+
+            <!-- Button stays in user-item, but is visually separated -->
+            <div class="user-item user-button">
+            <form action="{{ url_for('add_to_shortlist') }}" method="POST">
+                <input type="hidden" name="user_id" value="{{ user[0] }}">
+                <button type="submit" class="shortlist-btn" onclick="alert('Runner added to your shortlist!')">
+                Add to Shortlist
+                </button>
+            </form>
+            </div>
+
+        </li>
+        <!-- when you press add to shortlist, it takes the ID and adds it to the users account in the shortlist field -->
+                </form>
+            {% endfor %}
+        </ul>
+    </br>
+        <div style="text-align: center;">
+            <a href="{{ url_for('dashboard') }}" class="btn_preset">Back to Dashboard</a>
+        </div>
+
+        <form action="{{ url_for('shortlist') }}" method="get">
+            <button type="submit" class="btn_preset">View Shortlist</button>
+        </form>
+
+
+
+
+
+
+    </div>
+</body>
+</html>
