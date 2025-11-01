@@ -17,10 +17,10 @@ body {
 
 
 .search_container {
-    max-width: 800px;      /* increase width */
-    width: 90%;            /* makes it responsive on smaller screens */
+    max-width: 800px;      
+    width: 90%;            
     margin: 80px auto;
-    padding: 30px;         /* more padding for breathing room */
+    padding: 30px;         
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -191,7 +191,7 @@ button:hover {
     position: relative;
     width: 100%;
     height: 500px; /* move height from inline style to CSS */
-    background-image: url('/static/black_withered_bg.jpg'); /* add your image here */
+    background-image: url('/static/black_withered_bg.jpg'); 
     background-size: cover;
     background-position: center;
     display: flex;
