@@ -263,7 +263,7 @@ def pace_to_seconds(pace_str):
 
 
 # ================= search functions ================= #
-@app.route('/search_runners', methods=['POST'])
+@app.route('/search_runners', methods=['POST']) # flask responds to the POST method
 def search_runners():
     proficiency = request.form['Proficiency']
     pace = request.form['PreferredPaceLevel']
